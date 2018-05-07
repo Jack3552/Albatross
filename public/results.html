@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Albatross: Search Results</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/albatross.css">
+</head>
+<body>
+	<header class="topBar">
+		<h1 class="h1"><a href="http://localhost:3000/index.html" style="text-decoration: none">Albatross</a></h1>
+		<button id="loginBtn" onclick="document.getElementById('id01').style.display='block'">Login</button>
+		<button id="logoutBtn">Log Out</button>
+		<form action="http://localhost:3000/manager_menu.html"><button id="gotoManagementBtn">Hotel management</button></form>
+	</header>
+
+	<div id="id01" class="modal">
+	  
+	  <form class="modal-content animate" action="/action_page.php">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	      <img src="images/avatar.png" alt="Avatar" class="avatar">
+	    </div>
+
+	    <div class="container">
+	      <label for="uname"><b>Email</b></label>
+	      <input type="text" placeholder="Enter email" name="uname" required>
+
+	      <label for="psw"><b>Password</b></label>
+	      <input type="password" placeholder="Enter Password" name="psw" required>
+	        
+	      <button type="submit" class="loginBtn2">Login</button>
+	      <button type="submit">Sign Up</button>
+	      <label>
+	        <input type="checkbox" checked="checked" name="remember"> Remember me
+	      </label>
+	      
+	      <span class="psw">or proceed with <a href="#" style="color:snow;">guest checkout....</a></span> 
+	      <pre> </pre>
+	    </div>
+
+	    <div class="container" style="background-color: rgba(0, 0, 0, 0.5)">
+	      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	      <span class="psw">Forgot <a href="#">password?</a><br>Manager <a href="#">login?</a></span>
+	    </div>
+	  </form>
+	</div>
+
+
+	<div id="contents">
+		<main id="contentsAside">  
+			<div id="resultsTile1">
+				<img src="images/roomThumbnails/peppers_thumbnail.jpg" style="margin:5px" alt='Peppers'>
+				<p class="resulttext">Hilton Adelaide<br>Price $275/night<br>Standard Room</p>
+				<form action="http://localhost:3000/roompage.html" class="viewlink">
+					<button>view</button>			
+				</form>
+				<div class="rating">
+					<p><b><i>Rating</i></b></p>
+					<span>✮</span><span>✮</span><span>✮</span><span>✮</span><span>✮</span>
+				</div>
+			</div>
+			<div id="resultsTile2">
+				<img src="images/roomThumbnails/room1.jpg" style="margin:5px" alt='Room1'>
+				<p class="resulttext">Richmond Hotel<br>Price $165/night<br>Standard Room</p>
+				<form action="http://localhost:3000/roompage.html" class="viewlink">
+					<button>view</button>			
+				</form>
+				<div class="rating">
+					<p><b><i>Rating</i></b></p>
+					<span>✮</span><span>✮</span><span>✮</span><span>✮</span><span>☆</span>
+				</div>
+			</div>
+			<div id="resultsTile3">
+				<img src="images/roomThumbnails/room2.jpg" style="margin:5px" alt='Room2'>
+				<p class="resulttext">Ibis Hotel<br>Price $142/night<br>Standard Room</p>
+				<form action="http://localhost:3000/roompage.html" class="viewlink">
+					<button>view</button>			
+				</form>
+				<div class="rating">
+					<p><b><i>Rating</i></b></p>
+					<span>✮</span><span>✮</span><span>✮</span><span>✮</span><span>☆</span>
+				</div>
+			</div>
+			<div id="resultsTile4">
+				<img src="images/roomThumbnails/room3.jpg" style="margin:5px" alt='Room3'>
+				<p class="resulttext">Oaks Embassy<br>Price $122/night<br>Standard Room</p>
+				<form action="http://localhost:3000/roompage.html" class="viewlink">
+					<button>view</button>			
+				</form>
+				<div class="rating">
+					<p><b><i>Rating</i></b></p>
+					<span>✮</span><span>✮</span><span>✮</span><span>☆</span><span>☆</span>
+				</div>
+			</div>
+			<div id="resultsTile5">
+				<img src="images/roomThumbnails/room4.jpg" style="margin:5px" alt='Room4'>
+				<p class="resulttext">Stamford Plaza<br>Price $218/night<br>Standard Room</p>
+				<form action="http://localhost:3000/roompage.html" class="viewlink">
+					<button>view</button>			
+				</form>
+				<div class="rating">
+					<p><b><i>Rating</i></b></p>
+					<span>✮</span><span>✮</span><span>✮</span><span>✮</span><span>✮</span>
+				</div>
+			</div>
+		</main>
+
+		<!-- <aside id="test">
+			<div id="maps">
+				<iframe
+					float: right;
+					width="150px";
+					height="230px";	
+ 					border="0" style="border:0"
+  					src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA8FXmzh8Gj7OeAe3pz-U_crD_Bu-e7uH0&q=Hilton+Adelaide,Adelaide+SA&zoom=16" allowfullscreen>
+					  
+				</iframe>
+			</div>
+				<ul id="myUL">
+
+				  <li><div class="slidecontainer">
+					  <p>Price:</p>
+					  <input type="range" min="1" max="100" value="50">
+					  <pre>0$          500$</pre>
+					  </div>
+				  </li>
+
+				  <li><div class="slidecontainer">
+					<p>Guest Rating:</p>
+					<input type="range" min="1" max="100" value="50">
+					<pre>1             10</pre>
+					</div>
+				  </li>
+				  
+				  <li><div class="slidecontainer">
+					<p>Hotel Class:</p>
+					<input type="range" min="1" max="100" value="50">
+					<pre>1*             5*</pre>
+					</div>
+				  </li>
+				  
+				</ul> -->
+		<div class="search">
+			<!-- <input id="mainsearch" type="text" class="searchTerm" type="text" placeholder="Enter location . . .">
+				<button id="pass" onclick="transfer()" type="submit" class="searchButton"><i class="fa fa-search fa"></i></button> -->
+		
+			<input id="pac-input" class="controls" type="text" placeholder="Enter location . . .">
+		</div>
+	
+
+		<div id="map">
+				<input id="pac-input" class="controls" type="text" placeholder="Enter location . . .">
+				<div id="map"></div>
+				<script src="map.js"></script>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8FXmzh8Gj7OeAe3pz-U_crD_Bu-e7uH0&libraries=places&callback=initAutocomplete" async defer></script> 
+			</div>
+		<ul id="myUL">
+
+		  <li><div class="slidecontainer">
+			  <p>Price:</p>
+			  <input type="range" min="1" max="100" value="50">
+			  <pre>0$          500$</pre>
+			  </div>
+		  </li>
+
+		  <li><div class="slidecontainer">
+			<p>Guest Rating:</p>
+			<input type="range" min="1" max="100" value="50">
+			<pre>1             10</pre>
+			</div>
+		  </li>
+		  
+		  <li><div class="slidecontainer">
+			<p>Hotel Class:</p>
+			<input type="range" min="1" max="100" value="50">
+			<pre>1*             5*</pre>
+			</div>
+		  </li>
+		</ul>
+
+		</aside>
+	</div>
+
+	<footer class="bottomNav">
+		<a href="http://localhost:3000/index.html">Home</a>
+		<a href="http://localhost:3000/about_us.html">About Us</a>
+		<a href="http://localhost:3000/contact_us.html">Contact</a>
+	</footer>
+	<script src="javascripts/login.js"></script>
+	<script src="javascripts/filterfunc.js"></script>
+	<script src="javascripts/map.js"></script>
+</body>
+</html>

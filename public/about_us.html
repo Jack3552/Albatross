@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Albatross: Management Menu</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/albatross.css">
+</head>
+<body>
+	<header class="topBar">
+		<h1 class="h1"><a href="http://localhost:3000/index.html" style="text-decoration: none">Albatross</a></h1>
+		<button id="loginBtn" onclick="document.getElementById('id01').style.display='block'">Login</button>
+		<button id="logoutBtn">Log Out</button>
+		<form action="http://localhost:3000/manager_menu.html"><button id="gotoManagementBtn">Hotel management</button></form>
+	</header>
+
+	<div id="id01" class="modal">
+	  
+	  <form class="modal-content animate" action="/action_page.php">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	      <img src="images/avatar.png" alt="Avatar" class="avatar">
+	    </div>
+
+	    <div class="container">
+	      <label for="uname"><b>Email</b></label>
+	      <input type="text" placeholder="Enter email" name="uname" required>
+
+	      <label for="psw"><b>Password</b></label>
+	      <input type="password" placeholder="Enter Password" name="psw" required>
+	        
+	      <button type="submit" class="loginBtn2">Login</button>
+	      <button type="submit">Sign Up</button>
+	      <label>
+	        <input type="checkbox" checked="checked" name="remember"> Remember me
+	      </label>
+	      
+	      <span class="psw">or proceed with <a href="#" style="color:snow;">guest checkout....</a></span> 
+	      <pre> </pre>
+	    </div>
+
+	    <div class="container" style="background-color: rgba(0, 0, 0, 0.5)">
+	      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	      <span class="psw">Forgot <a href="#">password?</a><br>Manager <a href="#">login?</a></span>
+	    </div>
+	  </form>
+	</div>
+
+	<div id="aboutUs">
+		<h2>About Us</h2>
+		<p>Founded in 1998 by Yetchi, Jack and Sakib, Albatross is the leading international service provider in flight and accommodation booking.<br><br>
+		Albatross' hotel search allows users to compare hotel prices in just a few clicks for over 4 hotels in 1 city. With 20 vists annually to our site, travellers regularly use the hotel comparison to compare deals in the same city.<br><br>
+		Our staff at Albatross are fully committed to finding the lowest price for you and providing excellent customer service.</p>
+	</div>
+	<footer class="bottomNav">
+		<a href="http://localhost:3000/index.html">Home</a>
+		<a href="http://localhost:3000/about_us.html">About Us</a>
+		<a href="http://localhost:3000/contact_us.html">Contact</a>
+	</footer>
+	<script src="javascripts/login.js"></script>
+</body>
+</html>

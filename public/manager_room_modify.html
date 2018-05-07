@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Albatross: Add room</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/albatross.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<header class="topBar">
+		<h1 class="h1"><a href="http://localhost:3000/index.html" style="text-decoration: none">Albatross</a></h1>
+		<button id="loginBtn" onclick="document.getElementById('id01').style.display='block'">Login</button>
+		<button id="logoutBtn">Log Out</button>
+		<form action="http://localhost:3000/manager_menu.html"><button id="gotoManagementBtn">Hotel management</button></form>
+	</header>
+
+	<div id="id01" class="modal">
+	  
+	  <form class="modal-content animate" action="/action_page.php">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	      <img src="images/avatar.png" alt="Avatar" class="avatar">
+	    </div>
+
+	    <div class="container">
+	      <label for="uname"><b>Email</b></label>
+	      <input type="text" placeholder="Enter email" name="uname" required>
+
+	      <label for="psw"><b>Password</b></label>
+	      <input type="password" placeholder="Enter Password" name="psw" required>
+	        
+	      <button type="submit" class="loginBtn2">Login</button>
+	      <button type="submit">Sign Up</button>
+	      <label>
+	        <input type="checkbox" checked="checked" name="remember"> Remember me
+	      </label>
+	      
+	      <span class="psw">or proceed with <a href="#" style="color:snow;">guest checkout....</a></span> 
+	      <pre> </pre>
+	    </div>
+
+	    <div class="container" style="background-color: rgba(0, 0, 0, 0.5)">
+	      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	      <span class="psw">Forgot <a href="#">password?</a><br>Manager <a href="#">login?</a></span>
+	    </div>
+	  </form>
+	</div>
+
+	<div class="hotelLogo">
+		<img src="images/hotelLogos/hilton.png">
+	</div>
+
+	<div id="roomSelectionDiv">
+		<div class='roomListButtons'>
+			<button onclick="selectAll(this)">Select all</button>
+			<button onclick="selectNone(this)">Select none</button>
+			<button onclick="deleteChecked(this)">Delete</button>
+		</div>
+
+		<div id='roomList'>
+			<form action="/action_page.php" method="get">
+				<input type="checkbox" name="roomNumber" value="room1"> <a href="http://localhost:3000/room_add.html">Room 1</a><br>
+				<input type="checkbox" name="roomNumber" value="room2"> <a href="http://localhost:3000/room_add.html">Room 2</a><br>
+				<input type="checkbox" name="roomNumber" value="room10"> <a href="http://localhost:3000/room_add.html">Room 10</a><br>
+			</form>
+		</div>
+	</div>
+
+	<footer class="bottomNav">
+		<a href="http://localhost:3000/home.html">Home</a>
+		<a href="http://localhost:3000/about_us.html">About Us</a>
+		<a href="http://localhost:3000/contact_us.html">Contact</a>
+	</footer>
+	<script src="javascripts/login.js"></script>
+	<script src="javascripts/manager_room_modify.js"></script>
+</body>
+</html>
