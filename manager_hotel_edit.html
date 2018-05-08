@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Albatross: Management Menu</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/albatross.css">
+</head>
+<body>
+	<header class="topBar">
+		<h1 class="h1"><a href="http://localhost:3000/index.html" style="text-decoration: none">Albatross</a></h1>
+		<button id="loginBtn" onclick="document.getElementById('id01').style.display='block'">Login</button>
+		<button id="logoutBtn">Log Out</button>
+		<form action="http://localhost:3000/manager_menu.html"><button id="gotoManagementBtn">Hotel management</button></form>
+	</header>
+
+<!-- 	<div id="id01" class="modal">
+	  
+	  <form class="modal-content animate" action="/action_page.php">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	      <img src="images/avatar.png" alt="Avatar" class="avatar">
+	    </div>
+
+	    <div class="container">
+	      <label for="uname"><b>Email</b></label>
+	      <input type="text" placeholder="Enter email" name="uname" required>
+
+	      <label for="psw"><b>Password</b></label>
+	      <input type="password" placeholder="Enter Password" name="psw" required>
+	        
+	      <button type="submit" class="loginBtn2">Login</button>
+	      <button type="submit">Sign Up</button>
+	      <label>
+	        <input type="checkbox" checked="checked" name="remember"> Remember me
+	      </label>
+	      
+	      <span class="psw">or proceed with <a href="#" style="color:snow;">guest checkout....</a></span> 
+	      <pre> </pre>
+	    </div>
+
+	    <div class="container" style="background-color: rgba(0, 0, 0, 0.5)">
+	      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	      <span class="psw">Forgot <a href="#">password?</a><br>Manager <a href="#">login?</a></span>
+	    </div>
+	  </form>
+	</div> -->
+
+	<div class="hotelLogo">
+		<img src="images/hotelLogos/hilton.png">
+		<button>Upload logo</button>
+	</div>
+
+	<div id="mapedit">
+		<input id="mpac-input" class="controls" type="text" placeholder="Enter location . . .">
+		<div id="mmap"></div>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8FXmzh8Gj7OeAe3pz-U_crD_Bu-e7uH0&libraries=places&callback=minitAutocomplete"></script>		
+	</div>
+	<button id="mbutton" onclick="addMarker();">Add Marker</button>
+
+	<div id="editHotelDiv">
+		<aside class="hotelNewInputAside">
+			<input id="hotelClass" type="text">
+			<span>Hotel Class (1-5)</span>
+			<input id="guestRating" type="text">
+			<span>Guest Rating (1-10)</span>
+			<div id="facsAndServs">
+				<h3>Facilities and Services</h3>
+				<button><img src="images/managerIcons/wifi.png"></i></button>
+				<button><img src="images/managerIcons/swimming.png"></button>
+				<button><img src="images/managerIcons/spa.png"></button>
+				<button><img src="images/managerIcons/cocktail.png"></button>
+				<button><img src="images/managerIcons/dumbell.png"></button>
+				<button><img src="images/managerIcons/laundry.png"></button>
+			</div>
+
+			<div class="uploadHotelPics">
+				<h3>Upload photos</h3>
+				<input type="file" id="files" name="files[]" multiple />
+				<output id="list"></output>
+			</div>
+
+			<div class="hotelSave">
+				<form action="http://localhost:3000/manager_menu.html">
+					<button class="saveButton">SAVE</button>
+				</form>
+			</div>
+
+			<div class="roomManagementBtns">
+				<form action='manager_room_add.html'><button>Add room</button></form>
+				<form action='manager_room_modify.html'><button>Modify/delete room</button></form>
+				<button id="modalBtn" class="button">Delete hotel</button>
+			</div>
+
+			<!-- <div id="simpleModal" class="modal">
+				<div class="modal-content"> -->
+			<div id="deleteModal" class="deleteModal">
+				<div class="delete-modal-content">
+					<span class="delCloseBtn">&times;</span>
+					<p>Are you sure?</p>
+					<form action='http://localhost:3000/manager_menu.html'>
+						<button class="yes">Yes</button>
+					</form>
+				</div>
+			</div>
+
+		</aside>
+
+		<section id="sideManagerBar">
+			<div class='managerHotelNameDiv'>
+				<h3>Hotel name</h3>
+				<textarea class="textInput" rows="1" cols="20" placeholder="Hotel name"></textarea>
+			</div>
+			<div class="managerAddressDiv">
+				<h3>Address</h3>
+				<textarea class="textInput" rows="1" cols="25" placeholder="Street address"></textarea>
+				<textarea class="textInput" rows="1" cols="15" placeholder="City"></textarea>
+				<textarea class="textInput" rows="1" cols="15" placeholder="Country"></textarea>
+				<textarea rows="1" cols="8" placeholder="Postcode"></textarea>
+			</div>
+
+			<div class="managerDescriptionDiv">
+				<h3>Description</h3>
+				<textarea rows="20" cols="29" placeholder='Type description here...'></textarea>
+			</div>
+		</section>
+	</div>
+
+	<footer class="bottomNav">
+		<a href="http://localhost:3000/home.html">Home</a>
+		<a href="http://localhost:3000/about_us.html">About Us</a>
+		<a href="http://localhost:3000/contact_us.html">Contact</a>
+	</footer>
+	<script src="javascripts/login.js"></script>
+	<script src="javascripts/upload_photos.js"></script>
+	<script src="javascripts/delete_hotel.js"></script>
+	<script src="javascripts/map.js"></script>
+</body>
+</html>

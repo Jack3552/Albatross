@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Albatross: Management Menu</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/albatross.css">
+</head>
+<body>
+	<header class="topBar">
+		<h1 class="h1"><a href="http://localhost:3000/index.html" style="text-decoration: none">Albatross</a></h1>
+		<button id="loginBtn" onclick="document.getElementById('id01').style.display='block'">Login</button>
+		<button id="logoutBtn">Log Out</button>
+		<form action="http://localhost:3000/manager_menu.html"><button id="gotoManagementBtn">Hotel management</button></form>
+	</header>
+
+	<div id="id01" class="modal">
+	  
+	  <form class="modal-content animate" action="/action_page.php">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	      <img src="images/avatar.png" alt="Avatar" class="avatar">
+	    </div>
+
+	    <div class="container">
+	      <label for="uname"><b>Email</b></label>
+	      <input type="text" placeholder="Enter email" name="uname" required>
+
+	      <label for="psw"><b>Password</b></label>
+	      <input type="password" placeholder="Enter Password" name="psw" required>
+	        
+	      <button type="submit" class="loginBtn2">Login</button>
+	      <button type="submit">Sign Up</button>
+	      <label>
+	        <input type="checkbox" checked="checked" name="remember"> Remember me
+	      </label>
+	      
+	      <span class="psw">or proceed with <a href="#" style="color:snow;">guest checkout....</a></span> 
+	      <pre> </pre>
+	    </div>
+
+	    <div class="container" style="background-color: rgba(0, 0, 0, 0.5)">
+	      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	      <span class="psw">Forgot <a href="#">password?</a><br>Manager <a href="#">login?</a></span>
+	    </div>
+	  </form>
+	</div>
+
+	<div id= "details_wrapper">
+		<!--Room Details Grey Box -->
+		<div id="room_details">
+			<h2>Room Details</h2>
+			<hr>
+			<p><span><strong>Hotel: </strong></span>Peppers on Waymouth</p>
+			<p><span><strong>Price per night: </strong></span>$278</p>
+			<p><span><strong>Room Type: </strong></span>Queen Suite</p>
+			<p><span><strong>Distance to city center: </strong></span>0.54km</p>
+			<p><strong>Features: </strong></p>
+			<ul>
+				<li>Free Wifi</li>
+				<li>Room Service</li>
+				<li>Temperature Control</li>
+				<li>Complimentary Breakfast</li>
+			</ul>
+		</div>
+
+		<!-- Trigger confirmation popup -->
+		<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-blue" id="booking-button">Book Room</button>
+
+		<!--Popup confirming booking -->
+		<div id="id01" class="w3-modal">
+		  <div class="w3-modal-content w3-animate-top">
+		    <div class="w3-container">
+		      <span onclick="document.getElementById('id01').style.display='none'" 
+		      class="w3-button w3-display-topright">&times;</span>
+		      <p>You have successfully booked this room!</p>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="w3-center w3-content w3-display-container">
+		<img class="pepper" src ="images/peppersPictures/peppers1.jpeg" style="width:100%">
+		<img class="pepper" src ="images/peppersPictures/peppers2.jpeg" style="width:100%">
+		<img class="pepper" src ="images/peppersPictures/peppers3.jpeg" style="width:100%">
+		<img class="pepper" src ="images/peppersPictures/peppers4.jpeg" style="width:100%">
+		<img class="pepper" src ="images/peppersPictures/peppers5.jpeg" style="width:100%">
+		<img class="pepper" src ="images/peppersPictures/peppers6.jpeg" style="width:100%">
+		<img class="pepper" src ="images/peppersPictures/peppers7.jpeg" style="width:100%">
+
+		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+
+	<footer class="bottomNav">
+		<a href="http://localhost:3000/home.html">Home</a>
+		<a href="http://localhost:3000/about_us.html">About Us</a>
+		<a href="http://localhost:3000/contact_us.html">Contact</a>
+	</footer>
+	<script src="javascripts/albatross_room_page.js"></script>
+	<script src="javascripts/login.js"></script>
+</body>
+</html>
